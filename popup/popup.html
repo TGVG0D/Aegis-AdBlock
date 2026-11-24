@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Aegis AdBlock</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="popup-head">
+    <div class="popup-brand">
+      <div class="brand-mark" id="popup-mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-name">Aegis AdBlock</div>
+        <div class="brand-sub">Proteção local</div>
+      </div>
+    </div>
+    <span id="popup-status"></span>
+  </header>
+  <main id="popup-content">
+    <div class="loading"><span class="spinner"></span>Carregando…</div>
+  </main>
+  <footer class="popup-foot">
+    <span>Dados somente neste dispositivo</span>
+    <span id="popup-version">v1.0.0</span>
+  </footer>
+  <div class="toast-stack" id="toast-stack"></div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

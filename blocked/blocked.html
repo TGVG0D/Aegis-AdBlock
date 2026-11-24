@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Página bloqueada · Aegis AdBlock</title>
+  <link rel="stylesheet" href="../ui/styles.css">
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body class="blocked-page">
+  <main class="blocked-shell">
+    <div class="blocked-brand">
+      <div class="brand-mark" id="blocked-mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-name">Aegis AdBlock</div>
+        <div class="brand-sub">Lista de bloqueio local</div>
+      </div>
+    </div>
+
+    <section class="blocked-card" id="blocked-card" aria-live="polite">
+      <div class="loading"><span class="spinner"></span>Identificando a regra responsável…</div>
+    </section>
+
+    <footer class="blocked-foot">
+      <span>Esta decisão foi tomada no seu dispositivo.</span>
+      <a id="blocked-dashboard" href="#" class="blocked-link">Gerenciar lista de bloqueio</a>
+    </footer>
+  </main>
+  <div class="toast-stack" id="toast-stack"></div>
+  <script src="blocked.js" type="module"></script>
+</body>
+</html>

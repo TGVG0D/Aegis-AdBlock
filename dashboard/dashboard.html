@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Aegis AdBlock</title>
+  <link rel="stylesheet" href="../ui/styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" id="brand-mark" aria-hidden="true"></div>
+        <div>
+          <div class="brand-name">Aegis AdBlock</div>
+          <div class="brand-sub">Proteção local</div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Navegação principal">
+        <div class="nav-group-label">Painel</div>
+        <a class="nav-link" href="#/overview" data-route="overview"><span class="nav-icon" data-icon="dashboard"></span>Visão geral</a>
+        <a class="nav-link" href="#/statistics" data-route="statistics"><span class="nav-icon" data-icon="chart"></span>Estatísticas</a>
+        <div class="nav-group-label">Proteção</div>
+        <a class="nav-link" href="#/lists" data-route="lists"><span class="nav-icon" data-icon="lists"></span>Listas de filtros</a>
+        <a class="nav-link" href="#/rules" data-route="rules"><span class="nav-icon" data-icon="rules"></span>Regras personalizadas</a>
+        <a class="nav-link" href="#/blocklist" data-route="blocklist"><span class="nav-icon" data-icon="ban"></span>Lista de bloqueio</a>
+        <a class="nav-link" href="#/whitelist" data-route="whitelist"><span class="nav-icon" data-icon="check"></span>Sites permitidos</a>
+        <a class="nav-link" href="#/cosmetics" data-route="cosmetics"><span class="nav-icon" data-icon="cosmetic"></span>Filtros cosméticos</a>
+        <div class="nav-group-label">Dados</div>
+        <a class="nav-link" href="#/history" data-route="history"><span class="nav-icon" data-icon="history"></span>Histórico</a>
+        <a class="nav-link" href="#/settings" data-route="settings"><span class="nav-icon" data-icon="settings"></span>Configurações</a>
+        <a class="nav-link" href="#/about" data-route="about"><span class="nav-icon" data-icon="info"></span>Sobre e diagnóstico</a>
+      </nav>
+      <div class="sidebar-foot" id="sidebar-status">
+        <div><span class="dot"></span><strong>Carregando…</strong></div>
+        <div style="margin-top:4px">Todos os dados ficam neste dispositivo.</div>
+      </div>
+    </aside>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+    <div class="main">
+      <header class="topbar">
+        <button class="btn btn-icon menu-btn" id="menu-btn" aria-label="Abrir menu"></button>
+        <div class="topbar-titles">
+          <h1 id="page-title">Visão geral</h1>
+          <div class="crumb" id="page-crumb">Resumo da proteção em tempo real</div>
+        </div>
+        <div class="topbar-actions">
+          <span id="protection-pill"></span>
+          <button class="btn btn-sm hide-small" id="btn-update-all" title="Atualizar todas as listas por URL">Atualizar listas</button>
+          <button class="btn btn-sm btn-primary" id="btn-protection-toggle">Desativar</button>
+        </div>
+      </header>
+      <main class="content" id="view" tabindex="-1">
+        <div class="loading"><span class="spinner"></span>Carregando painel…</div>
+      </main>
+    </div>
+  </div>
+  <div class="toast-stack" id="toast-stack"></div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
